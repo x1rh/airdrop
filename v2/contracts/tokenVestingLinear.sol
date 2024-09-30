@@ -83,7 +83,7 @@ contract TokenVestingLinear is Ownable, ReentrancyGuard {
     /// @notice Error emitted when invalid token address is passed (address is 0)
     error InvalidTokenPassed();
     
-    /// @notice Initialize the contract with the and signer address and merkle root
+    /// @notice Initialize the contract with the signer address and merkle root
     constructor(address signerAddress_, bytes32 root_) {
         if (signerAddress_ == address(0)) {
             revert InvalidSignerPassed();
